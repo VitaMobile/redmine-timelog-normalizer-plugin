@@ -1,0 +1,30 @@
+<p>
+  <label>Threshold</label>
+  <%= text_field_tag 'settings[threshold]', @settings['threshold'] %>
+</p>
+
+<p>
+  <label>Quota</label>
+  <%= text_field_tag 'settings[quota]', @settings['quota'] %>
+</p>
+
+<p>
+  <label>Remind Subject</label>
+  <%= text_field_tag 'settings[mail_remind_subject]',
+      @settings['mail_remind_subject'], :size => 60 %>
+</p>
+<p>
+  <label>Remind Body</label>
+  <%= text_area_tag 'settings[mail_remind_body]',
+      @settings['mail_remind_body'], :rows => 7, :cols => 40 %>
+</p>
+<p>
+  <label>Fix Subject</label>
+  <%= text_field_tag 'settings[mail_fix_subject]',
+      @settings['mail_fix_subject'], :size => 60 %>
+</p>
+<p>
+  <label>Fix Body</label>
+  <%= text_area_tag 'settings[mail_fix_body]',
+      @settings['mail_fix_body'], :rows => 7, :cols => 40 %>
+</p>

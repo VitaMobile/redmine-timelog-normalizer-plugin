@@ -1,0 +1,14 @@
+<h2>Users</h2>
+
+<% form_tag({:controller => "timelog_normalizer", :action => "save"},
+            :method => "post", :class => "nifty_form") do %>
+  <% for user in @users %>
+    <p>
+      <%= check_box_tag("user[]", user.id, user.timelog_normalizer_enable?, :id => "user_" + user.login) %>
+
+      <%= label_tag("user_" + user.login, user.firstname + " " + user.lastname) %>
+    </p>
+  <% end %>
+  <%= submit_tag "Save" %>
+
+<% end %>
